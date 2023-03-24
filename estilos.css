@@ -1,0 +1,25 @@
+.titulos{
+    text-align: center;
+    background-color: rgb(155, 7, 7);
+    padding: 5px;
+}
+.amarillo{
+    background-color: yellow; 
+    padding: 2px;
+}
+.centrar{
+    text-align: center;
+}
+#centrar{
+    text-align: center;
+    background-color: rgb(155, 7, 7);
+   padding: 10px;
+}
+#fondo{
+    background-color: pink;
+}
+#tituloprincipal{
+    background-color: orange;
+    text-align: center;
+    padding: 5px;
+}

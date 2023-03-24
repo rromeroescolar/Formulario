@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <form action="/php/info_producto.php" method="post">
+        <div id="tituloprincipal">FORMULARIO DE REGISTRO </div>
+        <fieldset>
+            <div id="fondo">
+            <legend class="titulos">Nombre y apellidos</legend>
+            <label for="nombreyapellidos" class="amarillo">Nombre y apellidos:</label>
+            <input type="text" name="Nombre y apellidos" value="" required placeholder="Introduce nombre y apellidos"
+                id="nombreyapellidos" size="200"> <br>
+            <label for="nombreusuario" class="amarillo">Nombre de usuario:</label>
+            <input type="text" name="Nombre de usuario" value="" required id="nombreusuario"
+                placeholder="Nombre de usuario"> <br>
+            <label for="contraseña" class="amarillo">Password:</label>
+            <input type="password" name="password" required id="contraseña" placeholder="Introduce password">
+            <br>
+        </div>
+
+        </fieldset>
+        <fieldset>
+            <div id="fondo">
+            <legend class="titulos">Dirección</legend>
+            <label class="amarillo">Tipo de Vía: </label>
+            <input type="radio" name="tipo de via" value="Calle" required>Calle <input type="radio" name="tipo de via"
+                value="Avenida" >Avenida<input type="radio" name="tipo de via" value="Paseo">Paseo <br>
+            <label for="nombrevia" class="amarillo">Nombre de la vía:</label>
+            <input type="text" name="nombre de la via" value="" required id="nombrevia"> <br>
+            <label for="number" class="amarillo">Número:</label>
+            <input type="number" name="telefono" value="" id="numero" pattern="[1-9]" > <br>
+            <label for="postal" class="amarillo">Código Postal:</label>
+            <input type="text" name="codigo postal" value="" required id="postal" maxlength="5" pattern="[0-9]{5}"> <br>
+            <label for="municipio" class="amarillo">Municipio:</label>
+            <input type="text" name="municipio" value="" id="municipio"> <br>
+            <label for="provincia" class="amarillo">Provincia: </label>
+            <select name="provincias España" id="provincia">
+                <option value="La Rioja">La Rioja</option>
+                <option value="Andalucía">Andalucía</option>
+                <option value="Extremadura">Extremadura</option>
+                <option value="Comunidad Valenciana">Comunidad Valenciana</option>
+                <option value="Cataluña">Cataluña</option>
+            </select>
+        </div>
+        </fieldset>
+        <fieldset>
+            <div id="fondo">
+            <legend class="titulos">Datos Personales</legend>
+            <label for="dni" class="amarillo">DNI:</label>
+            <input type="text" name="dni" value="" required id="dni" pattern="[0-9]{8}[A-Z]{1}" maxlength="9"> <br>
+            <label for="date" class="amarillo">Fecha de Nacimiento: </label>
+            <input type="date" name="fecha de Nacimiento" value="" required id="date"> <br>
+            <label for="email" class="amarillo">Email:</label>
+            <input type="email" name="email" value="" required id="email"> <br>
+            <label for="web" class="amarillo">Espacio Web: </label>
+            <input type="text" name="espacio web" value="" id="web"><br>
+            <label for="telefono" class="amarillo">Telefono:</label>
+            <input type="tel" name="telefono" value="" id="telefono"> <br>
+            <label for="fotos" class="amarillo">Fotos: </label>
+            <input type="file" name="archivos" id="fotos" ><br>
+        </div>
+        </fieldset>
+        <fieldset>
+            <div id="fondo">
+            <legend class="titulos">Intereses</legend>
+            <label class="amarillo">Seleccione sus preferencias:</label>
+            <input type="checkbox" name="preferencias" value="">Deportes<input type="checkbox" name="preferencias"
+                value="">Música<input type="checkbox" name="preferencias" value="">Cine<input type="checkbox"
+                name="preferencias" value="">Informática <br>
+                <label for="color" class="amarillo"> Color preferido: </label>
+           <input type="color" id="color"> <br>
+        </div>
+        </fieldset>
+        <div id="centrar">
+        <input type="image" name="imagen" src="boton.png" id="imagen" alt="imagen" formmethod="post"> <br>
+        <input type="submit" value="Enviar por GET sin validar" formmethod="get" formnovalidate>
+    </div>
+    </form>
+</body>
+
+</html>
